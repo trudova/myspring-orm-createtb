@@ -1,5 +1,6 @@
 package com.liv.entity;
 
+import com.liv.enums.Gender;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -37,4 +38,6 @@ public class Student {
 
     @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime localDateTime;
+@Enumerated(EnumType.STRING)
+    private Gender gender;
 }
